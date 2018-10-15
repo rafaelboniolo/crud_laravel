@@ -8,9 +8,9 @@ use App\Produto;
 class ProdutoController extends Controller
 {
     public function index() {
-        $produtos = Produto::all();
+        $products = Produto::all();
         $total = Produto::all()->count();
-        return view('list-produtos', compact('produtos', 'total'));
+        return view('list-produtos', compact('products', 'total'));
     }
 
     public function create() {
